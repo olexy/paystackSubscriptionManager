@@ -16,6 +16,26 @@
 
                     You are logged in!
                 </div>
+                <div class="card-header">
+                    <div class="links">
+                        <a href="/addcust">Register Customer</a>
+                    </div>
+                </div>
+                <div class="card-header">
+                    <div class="links">
+                        <a href="/addplan">Create Plan</a>
+                    </div>
+                </div>
+                <div class="card-header">
+                    <div class="links">
+                        <a href="/addsub">Buy Subscription</a>
+                    </div>
+                </div>
+                <div class="card-header">
+                <div class="links">
+                    <a href="/refsub">Verify Purchase</a>
+                </div>
+                </div>
             </div>
         </div>
     </div>

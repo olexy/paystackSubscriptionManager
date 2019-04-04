@@ -86,7 +86,7 @@
 
                 <div class="links">
                     <a href="#">Create Subscription</a>
-                  </div>
+                </div>
             </div>
         </div>
     </body>
