@@ -1,0 +1,161 @@
+{
+  "status": false,
+  "message": "Amount not sent"
+}
+{
+  "status": false,
+  "message": "Amount not sent"
+}
+{
+  "status": false,
+  "message": "Amount not sent"
+}
+{
+  "status": false,
+  "message": "Amount not sent"
+}
+{
+  "status": false,
+  "message": "Amount not sent"
+}
+{
+  "status": false,
+  "message": "Amount not sent"
+}
+{
+  "status": false,
+  "message": "Amount not sent"
+}
+{
+  "status": false,
+  "message": "Amount not sent"
+}
+{
+  "status": false,
+  "message": "Amount not sent"
+}
+{
+  "status": false,
+  "message": "Amount not sent"
+}
+{
+  "status": false,
+  "message": "Amount not sent"
+}
+{
+  "status": false,
+  "message": "Amount not sent"
+}
+{
+  "status": false,
+  "message": "Amount not sent"
+}
+{
+  "status": false,
+  "message": "Amount not sent"
+}
+{
+  "status": false,
+  "message": "Amount not sent"
+}
+{
+  "status": false,
+  "message": "Amount not sent"
+}
+{
+  "status": false,
+  "message": "Amount not sent"
+}
+{
+  "status": false,
+  "message": "Amount not sent"
+}
+{
+  "status": false,
+  "message": "Amount not sent"
+}
+{
+  "status": false,
+  "message": "Amount not sent"
+}
+{
+  "status": true,
+  "message": "Authorization URL created",
+  "data": {
+    "authorization_url": "https://checkout.paystack.com/s5165hoo7zhsns1",
+    "access_code": "s5165hoo7zhsns1",
+    "reference": "zb1b134z7o"
+  }
+}
+{
+  "status": true,
+  "message": "Authorization URL created",
+  "data": {
+    "authorization_url": "https://checkout.paystack.com/039111fw376nqlr",
+    "access_code": "039111fw376nqlr",
+    "reference": "f097zynkzl"
+  }
+}
+{
+  "status": true,
+  "message": "Authorization URL created",
+  "data": {
+    "authorization_url": "https://checkout.paystack.com/tifq277g4d6ud92",
+    "access_code": "tifq277g4d6ud92",
+    "reference": "lyytbpd77x"
+  }
+}
+{
+  "status": true,
+  "message": "Authorization URL created",
+  "data": {
+    "authorization_url": "https://checkout.paystack.com/h3nwhrxw7uz4rss",
+    "access_code": "h3nwhrxw7uz4rss",
+    "reference": "9obq5uqirk"
+  }
+}
+{
+  "status": true,
+  "message": "Authorization URL created",
+  "data": {
+    "authorization_url": "https://checkout.paystack.com/8q69reiqnwmwsjd",
+    "access_code": "8q69reiqnwmwsjd",
+    "reference": "8pttzh8n7y"
+  }
+}
+{
+  "status": true,
+  "message": "Authorization URL created",
+  "data": {
+    "authorization_url": "https://checkout.paystack.com/30xxxk5aqjq44ad",
+    "access_code": "30xxxk5aqjq44ad",
+    "reference": "800p9i2l8x"
+  }
+}
+{
+  "status": true,
+  "message": "Authorization URL created",
+  "data": {
+    "authorization_url": "https://checkout.paystack.com/wb7vybu46w5h234",
+    "access_code": "wb7vybu46w5h234",
+    "reference": "wrsnheq0kf"
+  }
+}
+{
+  "status": true,
+  "message": "Authorization URL created",
+  "data": {
+    "authorization_url": "https://checkout.paystack.com/96uju4tuzsvigc9",
+    "access_code": "96uju4tuzsvigc9",
+    "reference": "afy8xwg0hn"
+  }
+}
+{
+  "status": true,
+  "message": "Authorization URL created",
+  "data": {
+    "authorization_url": "https://checkout.paystack.com/5wu67l3y17ru77w",
+    "access_code": "5wu67l3y17ru77w",
+    "reference": "9ewp7ty863"
+  }
+}

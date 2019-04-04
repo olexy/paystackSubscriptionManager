@@ -18,7 +18,8 @@ class CreateSubscriptionsTable extends Migration
             $table->string('customer');
             $table->string('plan');
             $table->date('start_date');
-            $table->integer('auth');
+            $table->string('ref_code');
+            $table->string('auth_code');
             $table->string('sub_code');
             $table->timestamps();
         });

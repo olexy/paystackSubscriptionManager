@@ -17,10 +17,10 @@ class CreatePlansTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('description');
-            $table->integer('amount');
+            $table->string('amount');
             $table->string('interval');
-            $table->boolean('invoice')->default(1);
-            $table->boolean('sms')->default(0);
+            $table->string('invoice');
+            $table->string('sms');
             $table->string('plan_code');
             $table->timestamps();
         });

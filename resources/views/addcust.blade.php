@@ -13,7 +13,6 @@
 <body>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @include('sweet::alert')
-
     <div class="container register">
     <div class="row">
         <div class="col-md-3 register-left">
