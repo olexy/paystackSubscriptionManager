@@ -26,8 +26,11 @@ Route::get('/addplan', function () {
 //load sub page with customer and plan data
 Route::get('/addsub', 'PagesController@loadCustPlan')->middleware('auth');
 
-//load sub page with customer data
+//load sub verify page with customer data
 Route::get('/refsub', 'PagesController@loadCust')->middleware('auth');
+
+//load sub save page with customer data
+Route::get('/savesub', 'PagesController@loadCustForSave')->middleware('auth');
 
 
 // FORM PROCESSING
@@ -35,11 +38,14 @@ Route::get('/refsub', 'PagesController@loadCust')->middleware('auth');
 //process form => add customer to db
 Route::post('/addcust', 'DbStorageController@storeCust');
 
+//process form => add plan to db
+Route::post('/addplan', 'DbStorageController@storePlan');
+
 //process form => create sub
 Route::post('/createsub', 'DbStorageController@createSub');
 
-//process form => add plan to db
-Route::post('/addplan', 'DbStorageController@storePlan');
+//process form => verify sub
+Route::post('/refsub', 'DbStorageController@verifySub');
 
 
 // AJAX AND JQUERY CONTROLLER  ROUTES
@@ -52,5 +58,11 @@ Route::get('/findCustName', 'PagesController@findCustName');
 
 //find refcode based on chosen customer
 Route::get('/findRef', 'PagesController@findRef');
+
+//find refcode based on chosen customer
+Route::get('/findAuth', 'PagesController@findAuth');
+
+
+// *** CALLBACK **
 
 Route::get('/callbackFunct', 'PagesController@callbackFunct');

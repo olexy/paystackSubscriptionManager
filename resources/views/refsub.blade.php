@@ -28,7 +28,7 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <h3 class="register-heading">Verify Subscription</h3>
-                    <form  action="" name="createRe" method="POST">
+                    <form  action="/refsub" name="createRe" method="POST">
                     {{ csrf_field() }}
                     <div class="row register-form">
                         <div class="col-md-6">
@@ -36,7 +36,7 @@
                                 <select name="customerlist" class="form-control customerlist">
                                     <option class="hidden"  selected disabled>Please select a customer</option>
                                     @foreach($customers as $customer)
-                                        <option value="{{$customer->email}}">{{$customer->name}}</option>
+                                        <option value="{{$customer->customer}}">{{$customer->customer}}</option>
                                     @endforeach 
                                 </select>
                             </div>
@@ -46,29 +46,27 @@
                             <div class="form-group">
                                 <input type="text" name="txtrefcode" id="refcode" class="form-control" placeholder="Sub Ref. *" readonly="true"/>
                             </div>
-                            <input type="submit" class="btnRegister"  value="Make Payment"/>
+                            <input type="submit" class="btnRegister"  value="Verify Subscription"/>
                         </div>
                     </form>
                 </div>
             </div>    
 </body>
 </html>
-@endsection
+
 
 <script>
 $(document).ready(function(){
 
     $(document).on('change','.customerlist', function(){
-        // console.log('its changed!');
+        console.log('its changed!');
 
         var cust_name = $(this).val();
-        // console.log(plan_name);
+        console.log(cust_name);
         
-        var div=$(this).parent();
-
         $.ajax({
             type:'get',
-            url:'{!!URL::to('findAmount')!!}',
+            url:'{!!URL::to('findRef')!!}',
             data:{'name':cust_name},
             // dataType:'json', //return data will be json
             success:function(data){
@@ -86,5 +84,5 @@ $(document).ready(function(){
 
 });
 </script>
-
+@endsection
 

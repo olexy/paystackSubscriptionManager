@@ -127,7 +127,7 @@ class DbStorageController extends Controller
         }
     }
 
-    //create subscription
+    //create & initialize subscription
     public function createSub(Request $request)
     {
         $sub = new Subscription;
@@ -180,6 +180,104 @@ class DbStorageController extends Controller
         return redirect()->away($auth_url);
 
         //return redirect()->back();
+        
+    }
+
+    //reference and verify subscription payment
+    public function verifySub(Request $request)
+    {
+        $sub = Subscription::where('customer', $request->customerlist);
+
+        $ref_code = $request->txtrefcode;
+        $url = "https://api.paystack.co/transaction/verify/$ref_code";
+
+        // Call paystack to initialize transactionsand insert into db
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET",
+            // CURLOPT_POSTFIELDS =>"{\n   \"email\": \"$request->customerlist\", \n   \"amount\": \"$request->txtamount\"}",
+            CURLOPT_HTTPHEADER => array(
+            "Authorization: Bearer sk_test_36e175c5c710aacac84e2a3974988707c0834e7d",
+            "Cache-Control: no-cache",
+            "Content-Type: application/json"
+            ),
+        ));
+        
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+
+        $auth_code ='';
+        curl_close($curl);
+
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+            echo "<br/>=========Paystack Response============<br/>".$response."<br/>";
+                $myfile = file_put_contents('logs.txt', $response.PHP_EOL , FILE_APPEND | LOCK_EX);
+
+            $ans = json_decode($response);
+            $auth_code = $ans->data->authorization->authorization_code;       
+        }
+            
+        $sub->update(['auth_code'=> $auth_code]);
+
+        // Subscription::where('customer', $request->customerlist)->update(['auth_code'=> $auth_code]);
+
+        return redirect()->back();
+        
+    }
+
+    //saving subscription into the database
+    public function safeSub(Request $request)
+    {
+        $sub = Subscription::where('customer', $request->customerlist);
+
+
+        // Call paystack to initialize transactionsand insert into db
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => "https://api.paystack.co/subscription",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "POST",
+            // CURLOPT_POSTFIELDS =>"{\n   \"email\": \"$request->customerlist\", \n   \"amount\": \"$request->txtamount\"}",
+            CURLOPT_HTTPHEADER => array(
+            "Authorization: Bearer sk_test_36e175c5c710aacac84e2a3974988707c0834e7d",
+            "Cache-Control: no-cache",
+            "Content-Type: application/json"
+            ),
+        ));
+        
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+
+        $auth_code ='';
+        curl_close($curl);
+
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+            echo "<br/>=========Paystack Response============<br/>".$response."<br/>";
+                $myfile = file_put_contents('logs.txt', $response.PHP_EOL , FILE_APPEND | LOCK_EX);
+
+            $ans = json_decode($response);
+            $auth_code = $ans->data->authorization->authorization_code;       
+        }
+            
+        $sub->update(['auth_code'=> $auth_code]);
+
+        // Subscription::where('customer', $request->customerlist)->update(['auth_code'=> $auth_code]);
+
+        return redirect()->back();
         
     }
 }

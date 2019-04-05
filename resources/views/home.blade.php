@@ -32,9 +32,14 @@
                     </div>
                 </div>
                 <div class="card-header">
-                <div class="links">
-                    <a href="/refsub">Verify Purchase</a>
+                    <div class="links">
+                        <a href="/refsub">Verify Purchase</a>
+                    </div>
                 </div>
+                <div class="card-header">
+                    <div class="links">
+                        <a href="/savesub">Save Subscription</a>
+                    </div>
                 </div>
             </div>
         </div>

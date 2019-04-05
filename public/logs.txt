@@ -1,83 +1,4 @@
-{
-  "status": false,
-  "message": "Amount not sent"
-}
-{
-  "status": false,
-  "message": "Amount not sent"
-}
-{
-  "status": false,
-  "message": "Amount not sent"
-}
-{
-  "status": false,
-  "message": "Amount not sent"
-}
-{
-  "status": false,
-  "message": "Amount not sent"
-}
-{
-  "status": false,
-  "message": "Amount not sent"
-}
-{
-  "status": false,
-  "message": "Amount not sent"
-}
-{
-  "status": false,
-  "message": "Amount not sent"
-}
-{
-  "status": false,
-  "message": "Amount not sent"
-}
-{
-  "status": false,
-  "message": "Amount not sent"
-}
-{
-  "status": false,
-  "message": "Amount not sent"
-}
-{
-  "status": false,
-  "message": "Amount not sent"
-}
-{
-  "status": false,
-  "message": "Amount not sent"
-}
-{
-  "status": false,
-  "message": "Amount not sent"
-}
-{
-  "status": false,
-  "message": "Amount not sent"
-}
-{
-  "status": false,
-  "message": "Amount not sent"
-}
-{
-  "status": false,
-  "message": "Amount not sent"
-}
-{
-  "status": false,
-  "message": "Amount not sent"
-}
-{
-  "status": false,
-  "message": "Amount not sent"
-}
-{
-  "status": false,
-  "message": "Amount not sent"
-}
+
 {
   "status": true,
   "message": "Authorization URL created",
@@ -157,5 +78,369 @@
     "authorization_url": "https://checkout.paystack.com/5wu67l3y17ru77w",
     "access_code": "5wu67l3y17ru77w",
     "reference": "9ewp7ty863"
+  }
+}
+{
+  "status": true,
+  "message": "Verification successful",
+  "data": {
+    "id": 142986599,
+    "domain": "test",
+    "status": "success",
+    "reference": "afy8xwg0hn",
+    "amount": 1500000,
+    "message": null,
+    "gateway_response": "Successful",
+    "paid_at": "2019-04-04T09:10:47.000Z",
+    "created_at": "2019-04-04T09:10:38.000Z",
+    "channel": "card",
+    "currency": "NGN",
+    "ip_address": "197.242.102.77",
+    "metadata": "",
+    "log": {
+      "start_time": 1554368946,
+      "time_spent": 7,
+      "attempts": 1,
+      "errors": 0,
+      "success": true,
+      "mobile": false,
+      "input": [],
+      "history": [
+        {
+          "type": "action",
+          "message": "Attempted to pay with card",
+          "time": 6
+        },
+        {
+          "type": "success",
+          "message": "Successfully paid with card",
+          "time": 7
+        }
+      ]
+    },
+    "fees": 32500,
+    "fees_split": null,
+    "authorization": {
+      "authorization_code": "AUTH_2yn9umy2s7",
+      "bin": "408408",
+      "last4": "4081",
+      "exp_month": "12",
+      "exp_year": "2020",
+      "channel": "card",
+      "card_type": "visa DEBIT",
+      "bank": "Test Bank",
+      "country_code": "NG",
+      "brand": "visa",
+      "reusable": true,
+      "signature": "SIG_yvdPYFQwxKvgWBvH7LJp"
+    },
+    "customer": {
+      "id": 7531894,
+      "first_name": null,
+      "last_name": null,
+      "email": "lstephen1214@gmail.com",
+      "customer_code": "CUS_5yktl7s4sjl9vx2",
+      "phone": null,
+      "metadata": null,
+      "risk_action": "default"
+    },
+    "plan": null,
+    "paidAt": "2019-04-04T09:10:47.000Z",
+    "createdAt": "2019-04-04T09:10:38.000Z",
+    "transaction_date": "2019-04-04T09:10:38.000Z",
+    "plan_object": {},
+    "subaccount": {}
+  }
+}
+
+====
+
+
+{
+  "status": true,
+  "message": "Verification successful",
+  "data": {
+    "id": 143024476,
+    "domain": "test",
+    "status": "success",
+    "reference": "9ewp7ty863",
+    "amount": 1500000,
+    "message": null,
+    "gateway_response": "Successful",
+    "paid_at": "2019-04-04T10:31:07.000Z",
+    "created_at": "2019-04-04T10:30:53.000Z",
+    "channel": "card",
+    "currency": "NGN",
+    "ip_address": "197.242.102.77",
+    "metadata": "",
+    "log": {
+      "start_time": 1554373767,
+      "time_spent": 6,
+      "attempts": 1,
+      "errors": 0,
+      "success": true,
+      "mobile": false,
+      "input": [],
+      "history": [
+        {
+          "type": "action",
+          "message": "Attempted to pay with card",
+          "time": 5
+        },
+        {
+          "type": "success",
+          "message": "Successfully paid with card",
+          "time": 6
+        }
+      ]
+    },
+    "fees": 32500,
+    "fees_split": null,
+    "authorization": {
+      "authorization_code": "AUTH_z7h7meclff",
+      "bin": "408408",
+      "last4": "4081",
+      "exp_month": "12",
+      "exp_year": "2020",
+      "channel": "card",
+      "card_type": "visa DEBIT",
+      "bank": "Test Bank",
+      "country_code": "NG",
+      "brand": "visa",
+      "reusable": true,
+      "signature": "SIG_yvdPYFQwxKvgWBvH7LJp"
+    },
+    "customer": {
+      "id": 7533214,
+      "first_name": null,
+      "last_name": null,
+      "email": "lstephen@udel.edu",
+      "customer_code": "CUS_e5cp8k9y3h36txd",
+      "phone": null,
+      "metadata": null,
+      "risk_action": "default"
+    },
+    "plan": null,
+    "paidAt": "2019-04-04T10:31:07.000Z",
+    "createdAt": "2019-04-04T10:30:53.000Z",
+    "transaction_date": "2019-04-04T10:30:53.000Z",
+    "plan_object": {},
+    "subaccount": {}
+  }
+}
+{
+  "status": true,
+  "message": "Verification successful",
+  "data": {
+    "id": 143024476,
+    "domain": "test",
+    "status": "success",
+    "reference": "9ewp7ty863",
+    "amount": 1500000,
+    "message": null,
+    "gateway_response": "Successful",
+    "paid_at": "2019-04-04T10:31:07.000Z",
+    "created_at": "2019-04-04T10:30:53.000Z",
+    "channel": "card",
+    "currency": "NGN",
+    "ip_address": "197.242.102.77",
+    "metadata": "",
+    "log": {
+      "start_time": 1554373767,
+      "time_spent": 6,
+      "attempts": 1,
+      "errors": 0,
+      "success": true,
+      "mobile": false,
+      "input": [],
+      "history": [
+        {
+          "type": "action",
+          "message": "Attempted to pay with card",
+          "time": 5
+        },
+        {
+          "type": "success",
+          "message": "Successfully paid with card",
+          "time": 6
+        }
+      ]
+    },
+    "fees": 32500,
+    "fees_split": null,
+    "authorization": {
+      "authorization_code": "AUTH_z7h7meclff",
+      "bin": "408408",
+      "last4": "4081",
+      "exp_month": "12",
+      "exp_year": "2020",
+      "channel": "card",
+      "card_type": "visa DEBIT",
+      "bank": "Test Bank",
+      "country_code": "NG",
+      "brand": "visa",
+      "reusable": true,
+      "signature": "SIG_yvdPYFQwxKvgWBvH7LJp"
+    },
+    "customer": {
+      "id": 7533214,
+      "first_name": null,
+      "last_name": null,
+      "email": "lstephen@udel.edu",
+      "customer_code": "CUS_e5cp8k9y3h36txd",
+      "phone": null,
+      "metadata": null,
+      "risk_action": "default"
+    },
+    "plan": null,
+    "paidAt": "2019-04-04T10:31:07.000Z",
+    "createdAt": "2019-04-04T10:30:53.000Z",
+    "transaction_date": "2019-04-04T10:30:53.000Z",
+    "plan_object": {},
+    "subaccount": {}
+  }
+}
+{
+  "status": true,
+  "message": "Verification successful",
+  "data": {
+    "id": 143024476,
+    "domain": "test",
+    "status": "success",
+    "reference": "9ewp7ty863",
+    "amount": 1500000,
+    "message": null,
+    "gateway_response": "Successful",
+    "paid_at": "2019-04-04T10:31:07.000Z",
+    "created_at": "2019-04-04T10:30:53.000Z",
+    "channel": "card",
+    "currency": "NGN",
+    "ip_address": "197.242.102.77",
+    "metadata": "",
+    "log": {
+      "start_time": 1554373767,
+      "time_spent": 6,
+      "attempts": 1,
+      "errors": 0,
+      "success": true,
+      "mobile": false,
+      "input": [],
+      "history": [
+        {
+          "type": "action",
+          "message": "Attempted to pay with card",
+          "time": 5
+        },
+        {
+          "type": "success",
+          "message": "Successfully paid with card",
+          "time": 6
+        }
+      ]
+    },
+    "fees": 32500,
+    "fees_split": null,
+    "authorization": {
+      "authorization_code": "AUTH_z7h7meclff",
+      "bin": "408408",
+      "last4": "4081",
+      "exp_month": "12",
+      "exp_year": "2020",
+      "channel": "card",
+      "card_type": "visa DEBIT",
+      "bank": "Test Bank",
+      "country_code": "NG",
+      "brand": "visa",
+      "reusable": true,
+      "signature": "SIG_yvdPYFQwxKvgWBvH7LJp"
+    },
+    "customer": {
+      "id": 7533214,
+      "first_name": null,
+      "last_name": null,
+      "email": "lstephen@udel.edu",
+      "customer_code": "CUS_e5cp8k9y3h36txd",
+      "phone": null,
+      "metadata": null,
+      "risk_action": "default"
+    },
+    "plan": null,
+    "paidAt": "2019-04-04T10:31:07.000Z",
+    "createdAt": "2019-04-04T10:30:53.000Z",
+    "transaction_date": "2019-04-04T10:30:53.000Z",
+    "plan_object": {},
+    "subaccount": {}
+  }
+}
+{
+  "status": true,
+  "message": "Verification successful",
+  "data": {
+    "id": 143024476,
+    "domain": "test",
+    "status": "success",
+    "reference": "9ewp7ty863",
+    "amount": 1500000,
+    "message": null,
+    "gateway_response": "Successful",
+    "paid_at": "2019-04-04T10:31:07.000Z",
+    "created_at": "2019-04-04T10:30:53.000Z",
+    "channel": "card",
+    "currency": "NGN",
+    "ip_address": "197.242.102.77",
+    "metadata": "",
+    "log": {
+      "start_time": 1554373767,
+      "time_spent": 6,
+      "attempts": 1,
+      "errors": 0,
+      "success": true,
+      "mobile": false,
+      "input": [],
+      "history": [
+        {
+          "type": "action",
+          "message": "Attempted to pay with card",
+          "time": 5
+        },
+        {
+          "type": "success",
+          "message": "Successfully paid with card",
+          "time": 6
+        }
+      ]
+    },
+    "fees": 32500,
+    "fees_split": null,
+    "authorization": {
+      "authorization_code": "AUTH_z7h7meclff",
+      "bin": "408408",
+      "last4": "4081",
+      "exp_month": "12",
+      "exp_year": "2020",
+      "channel": "card",
+      "card_type": "visa DEBIT",
+      "bank": "Test Bank",
+      "country_code": "NG",
+      "brand": "visa",
+      "reusable": true,
+      "signature": "SIG_yvdPYFQwxKvgWBvH7LJp"
+    },
+    "customer": {
+      "id": 7533214,
+      "first_name": null,
+      "last_name": null,
+      "email": "lstephen@udel.edu",
+      "customer_code": "CUS_e5cp8k9y3h36txd",
+      "phone": null,
+      "metadata": null,
+      "risk_action": "default"
+    },
+    "plan": null,
+    "paidAt": "2019-04-04T10:31:07.000Z",
+    "createdAt": "2019-04-04T10:30:53.000Z",
+    "transaction_date": "2019-04-04T10:30:53.000Z",
+    "plan_object": {},
+    "subaccount": {}
   }
 }
