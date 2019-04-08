@@ -41,13 +41,21 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="txtplan" id="txtplan" class="form-control txtplan" placeholder="Plan Code *" readonly="true"/>
+                                <input type="text" name="txtplan" id="custcode" class="form-control txtcust" placeholder="Customer Code *" readonly="true"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="txtauthcode" id="authcode" class="form-control" placeholder="Payment Authorization *" readonly="true"/>
                             </div>
 
                         </div>
                         <div class="col-md-6">
+                            <select name="selectplan" id="selectplan" class="form-control lstplan">
+                            </select>
+                            <!-- <div class="form-group">
+                                <input type="hidden" name="planName" id="planName" class="form-control"/>
+                            </div> -->
                             <div class="form-group">
-                                <input type="text" name="txtauthcode" id="authcode" class="form-control" placeholder="Payment Authorization *" readonly="true"/>
+                                <input type="text" name="txtplancode" id="plancode" class="form-control" placeholder="Plan Code *" readonly="true"/>
                             </div>
                             <input type="submit" class="btnRegister"  value="Save Subscription"/>
                         </div>
@@ -57,6 +65,7 @@
 </body>
 </html>
 
+<!-- For the subscriber name select -->
 <script>
 $(document).ready(function(){
 
@@ -65,16 +74,63 @@ $(document).ready(function(){
 
         var cust_name = $(this).val();
         // console.log(cust_name);
+
+        var op=" ";
         
         $.ajax({
             type:'get',
             url:'{!!URL::to('findAuth')!!}',
             data:{'name':cust_name},
             // dataType:'json', //return data will be json
-            success:function(data){
+            success:function(merged){
                 // console.log('success');
-                // console.log(data[0].email);
-                $('#authcode').val(data[0].auth_code);
+                console.log(merged)
+                $('#authcode').val(merged[0].auth_code);
+                $('#custcode').val(merged[1].cust_code);
+                // $('#planName').val(merged[0].plan);
+
+				op+='<option value="0" selected disabled>Subscribed Plan</option>';
+                op+='<option value="'+merged[0].plan+'">'+merged[0].plan+'</option>';
+  
+                // var plan_name = $('#planName').val();        
+                // console.log(plan_name);
+                
+                $('#selectplan').html(" ")
+                $('#selectplan').append(op)
+
+            },            
+            error:function(){               
+
+            }
+
+        })
+    });
+
+});
+</script>
+
+<!-- For the plan name select -->
+<script>
+$(document).ready(function(){
+
+    $(document).on('change','.lstplan', function(){
+        // console.log('its changed!');
+
+        var plan_name = $(this).val();
+        // console.log(cust_name);
+
+        var op=" ";
+
+        
+        $.ajax({
+            type:'get',
+            url:'{!!URL::to('findPlan')!!}',
+            data:{'plan':plan_name},
+            // dataType:'json', //return data will be json
+            success:function(plan){
+                // console.log('success');
+                console.log(plan)
+                $('#plancode').val(plan[0].plan_code);
 
             },            
             error:function(){               

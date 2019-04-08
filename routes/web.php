@@ -62,6 +62,9 @@ Route::get('/findRef', 'PagesController@findRef');
 //find refcode based on chosen customer
 Route::get('/findAuth', 'PagesController@findAuth');
 
+//find plancode based on chosen subscribed plan
+Route::get('/findPlan', 'PagesController@findPlan');
+
 
 // *** CALLBACK **
 

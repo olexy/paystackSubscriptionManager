@@ -54,9 +54,24 @@ class PagesController extends Controller
 
     // find subscription payment auth code on clicking customer name select button
     public function findAuth(Request $request){
-        $data = Subscription::select('auth_code')->where('customer', $request->name)->take(100)->get();
-        return response()->json($data); //then sent this data to ajax success
+        $data = Subscription::select('auth_code','plan')->where('customer', $request->name)->take(100)->get();
+
+        $customer = Customer::select('cust_code')->where('name', $request->name)->take(100)->get();
+
+        // $plan = Plan::select('plan_code')->where('name', $request->plan)->take(100)->get();
+        
+        $merged = collect($data)->merge($customer);
+        
+        return response()->json($merged); //then sent this data to ajax success
     }
+
+    public function findPlan(Request $request){
+        
+        $plan = Plan::select('plan_code')->where('name', $request->plan)->take(100)->get();
+        
+        return response()->json($plan); //then sent this data to ajax success
+    }
+
 
 
     // pick callback on successfull payment from PayStack
