@@ -28,7 +28,7 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <h3 class="register-heading">Safe Subscription</h3>
-                    <form  action="/refsub" name="createRe" method="POST">
+                    <form  action="/savesub" name="createRe" method="POST">
                     {{ csrf_field() }}
                     <div class="row register-form">
                         <div class="col-md-6">
@@ -41,7 +41,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="txtplan" id="custcode" class="form-control txtcust" placeholder="Customer Code *" readonly="true"/>
+                                <input type="text" name="txtcustcode" id="custcode" class="form-control txtcust" placeholder="Customer Code *" readonly="true"/>
                             </div>
                             <div class="form-group">
                                 <input type="text" name="txtauthcode" id="authcode" class="form-control" placeholder="Payment Authorization *" readonly="true"/>

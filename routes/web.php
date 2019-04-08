@@ -47,6 +47,9 @@ Route::post('/createsub', 'DbStorageController@createSub');
 //process form => verify sub
 Route::post('/refsub', 'DbStorageController@verifySub');
 
+//process form => savesub
+Route::post('/savesub', 'DbStorageController@safeSub');
+
 
 // AJAX AND JQUERY CONTROLLER  ROUTES
 

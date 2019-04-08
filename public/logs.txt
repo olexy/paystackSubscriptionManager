@@ -444,3 +444,45 @@
     "subaccount": {}
   }
 }
+{
+  "status": true,
+  "message": "Subscription successfully created",
+  "data": {
+    "customer": 7531894,
+    "plan": 22493,
+    "integration": 337150,
+    "domain": "test",
+    "start": 1554711944,
+    "status": "active",
+    "quantity": 1,
+    "amount": 1500000,
+    "authorization": 24152566,
+    "invoice_limit": 0,
+    "subscription_code": "SUB_j51zgbsoe5jqdrv",
+    "email_token": "xguz628nw4zishe",
+    "id": 74036,
+    "createdAt": "2019-04-08T08:25:44.143Z",
+    "updatedAt": "2019-04-08T08:25:44.143Z"
+  }
+}
+{
+  "status": true,
+  "message": "Subscription successfully created",
+  "data": {
+    "customer": 7533214,
+    "plan": 22493,
+    "integration": 337150,
+    "domain": "test",
+    "start": 1554711993,
+    "status": "active",
+    "quantity": 1,
+    "amount": 1500000,
+    "authorization": 24161326,
+    "invoice_limit": 0,
+    "subscription_code": "SUB_lfly2xiv5zmwxsn",
+    "email_token": "f7nejp5llw0noli",
+    "id": 74037,
+    "createdAt": "2019-04-08T08:26:33.326Z",
+    "updatedAt": "2019-04-08T08:26:33.326Z"
+  }
+}

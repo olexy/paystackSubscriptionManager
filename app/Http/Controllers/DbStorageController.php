@@ -238,8 +238,7 @@ class DbStorageController extends Controller
     {
         $sub = Subscription::where('customer', $request->customerlist);
 
-
-        // Call paystack to initialize transactionsand insert into db
+        // Call paystack to initialize transactions and insert into db
         $curl = curl_init();
         curl_setopt_array($curl, array(
             CURLOPT_URL => "https://api.paystack.co/subscription",
@@ -249,7 +248,7 @@ class DbStorageController extends Controller
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "POST",
-            // CURLOPT_POSTFIELDS =>"{\n   \"email\": \"$request->customerlist\", \n   \"amount\": \"$request->txtamount\"}",
+            CURLOPT_POSTFIELDS =>"{\n   \"customer\": \"$request->txtcustcode\", \n   \"plan\": \"$request->txtplancode\", \n   \"authorization\": \"$request->txtauthcode\"}",
             CURLOPT_HTTPHEADER => array(
             "Authorization: Bearer sk_test_36e175c5c710aacac84e2a3974988707c0834e7d",
             "Cache-Control: no-cache",
@@ -260,7 +259,7 @@ class DbStorageController extends Controller
         $response = curl_exec($curl);
         $err = curl_error($curl);
 
-        $auth_code ='';
+        $sub_code ='';
         curl_close($curl);
 
         if ($err) {
@@ -270,14 +269,11 @@ class DbStorageController extends Controller
                 $myfile = file_put_contents('logs.txt', $response.PHP_EOL , FILE_APPEND | LOCK_EX);
 
             $ans = json_decode($response);
-            $auth_code = $ans->data->authorization->authorization_code;       
+            $sub_code = $ans->data->subscription_code;       
         }
             
-        $sub->update(['auth_code'=> $auth_code]);
+        $sub->update(['sub_code'=> $sub_code]);
 
-        // Subscription::where('customer', $request->customerlist)->update(['auth_code'=> $auth_code]);
-
-        return redirect()->back();
-        
+        return redirect()->back();        
     }
 }
