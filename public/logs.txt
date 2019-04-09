@@ -486,3 +486,105 @@
     "updatedAt": "2019-04-08T08:26:33.326Z"
   }
 }
+{
+  "status": true,
+  "message": "Authorization URL created",
+  "data": {
+    "authorization_url": "https://checkout.paystack.com/r5czz1o0js6k6e1",
+    "access_code": "r5czz1o0js6k6e1",
+    "reference": "0jjg8xbo5p"
+  }
+}
+{
+  "status": true,
+  "message": "Verification successful",
+  "data": {
+    "id": 145731152,
+    "domain": "test",
+    "status": "success",
+    "reference": "0jjg8xbo5p",
+    "amount": 3640000,
+    "message": null,
+    "gateway_response": "Successful",
+    "paid_at": "2019-04-08T09:08:15.000Z",
+    "created_at": "2019-04-08T09:08:05.000Z",
+    "channel": "card",
+    "currency": "NGN",
+    "ip_address": "154.118.45.135",
+    "metadata": "",
+    "log": {
+      "start_time": 1554714392,
+      "time_spent": 7,
+      "attempts": 1,
+      "errors": 0,
+      "success": true,
+      "mobile": false,
+      "input": [],
+      "history": [
+        {
+          "type": "action",
+          "message": "Attempted to pay with card",
+          "time": 6
+        },
+        {
+          "type": "success",
+          "message": "Successfully paid with card",
+          "time": 7
+        }
+      ]
+    },
+    "fees": 64600,
+    "fees_split": null,
+    "authorization": {
+      "authorization_code": "AUTH_bofc006nms",
+      "bin": "408408",
+      "last4": "4081",
+      "exp_month": "12",
+      "exp_year": "2020",
+      "channel": "card",
+      "card_type": "visa DEBIT",
+      "bank": "Test Bank",
+      "country_code": "NG",
+      "brand": "visa",
+      "reusable": true,
+      "signature": "SIG_yvdPYFQwxKvgWBvH7LJp"
+    },
+    "customer": {
+      "id": 7386545,
+      "first_name": null,
+      "last_name": null,
+      "email": "h.lekan@gmail.com",
+      "customer_code": "CUS_u2d0oc3n9ai2slv",
+      "phone": null,
+      "metadata": null,
+      "risk_action": "default"
+    },
+    "plan": null,
+    "paidAt": "2019-04-08T09:08:15.000Z",
+    "createdAt": "2019-04-08T09:08:05.000Z",
+    "transaction_date": "2019-04-08T09:08:05.000Z",
+    "plan_object": {},
+    "subaccount": {}
+  }
+}
+{
+  "status": true,
+  "message": "Subscription successfully created",
+  "data": {
+    "customer": 7386545,
+    "plan": 22607,
+    "integration": 337150,
+    "domain": "test",
+    "start": 1554714570,
+    "status": "active",
+    "quantity": 1,
+    "amount": 3640000,
+    "authorization": 24498253,
+    "invoice_limit": 0,
+    "subscription_code": "SUB_5i0unml17spsk1g",
+    "email_token": "9b04nmu9gu8ht7z",
+    "id": 74040,
+    "createdAt": "2019-04-08T09:09:30.032Z",
+    "updatedAt": "2019-04-08T09:09:30.032Z"
+  }
+}

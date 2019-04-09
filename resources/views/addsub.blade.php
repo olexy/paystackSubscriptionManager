@@ -1,5 +1,4 @@
-@extends('layouts.app')
-
+@extends('layouts.flow')
 @section('content')
 <!DOCTYPE html>
 <html lang="en">
@@ -7,11 +6,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <!-- Custom CSS -->
     <link href="css/pssub.css" rel="stylesheet" type="text/css" media="all" />
+    
+    <!-- jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" rel="stylesheet">  
+
+    <!-- Bootstrap library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+     
+ 
     <title>Create Subscription</title>
 </head>
 <body>
@@ -51,14 +58,21 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input name="txtamount" type="text" id="amount" class="form-control" placeholder="Plan Price *" readonly="true"/>
+                                <input name="txtamount" type="text" id="amount" class="form-control" placeholder="Plan Price *" readonly/>
                                 <input type="hidden" name="custName"  id="custName" value="{{$customer->name}}" class="form-control"/>
+                            </div>
+                            <div class="form-group">
+                                <input class="datepicker form-control" id="datepicker" type="text" placeholder="Start date *" readonly="true">
                             </div>
                             <input type="submit" class="btnRegister"  value="Make Payment"/>
                         </div>
                     </form>
                 </div>
-            </div>    
+            </div>  
+
+<script type="text/javascript">
+    $('.datepicker').datepicker();
+</script>
 </body>
 </html>
 

@@ -20,6 +20,11 @@ Route::get('/addplan', function () {
     return view('addplan');
 })->middleware('auth');
 
+Route::get('/datetest', function () {
+    return view('datetest');
+})->middleware('auth');
+
+
 
 // DATABSE LOGIC
 
