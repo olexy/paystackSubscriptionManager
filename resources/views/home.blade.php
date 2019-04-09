@@ -16,7 +16,7 @@
 
                     You are logged in!
                 </div>
-                <div class="card-header">
+                <!-- <div class="card-header">
                     <div class="links">
                         <a href="/addcust">Register Customer</a>
                     </div>
@@ -40,7 +40,7 @@
                     <div class="links">
                         <a href="/savesub">Save Subscription</a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
