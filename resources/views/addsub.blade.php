@@ -12,7 +12,9 @@
     <!-- jQuery library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script> 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" rel="stylesheet">  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.js"></script> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" rel="stylesheet">   
 
     <!-- Bootstrap library -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
@@ -62,7 +64,7 @@
                                 <input type="hidden" name="custName"  id="custName" value="{{$customer->name}}" class="form-control"/>
                             </div>
                             <div class="form-group">
-                                <input class="datepicker form-control" id="datepicker" type="text" placeholder="Start date *" readonly="true">
+                                <input class="datepicker form-control" id="datepicker" name="datepicker" type="text" placeholder="Start date *" readonly="true">
                             </div>
                             <input type="submit" class="btnRegister"  value="Make Payment"/>
                         </div>
@@ -71,7 +73,7 @@
             </div>  
 
 <script type="text/javascript">
-    $('.datepicker').datepicker();
+    $('.datepicker').datetimepicker();
 </script>
 </body>
 </html>

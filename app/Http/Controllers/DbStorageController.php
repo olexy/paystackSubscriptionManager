@@ -173,6 +173,7 @@ class DbStorageController extends Controller
 
         $sub->customer = $request->custName;
         $sub->plan = $request->planlist;
+        $sub->start_date = $request->datepicker;
         $sub->ref_code = $ref;
     
         $sub->save();
